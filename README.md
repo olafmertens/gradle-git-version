@@ -16,7 +16,7 @@ Usage
 Add the plugin the usual way:
 ```groovy
 plugins {
-    id 'com.olafmertens.git-version' version '0.1.0'
+    id 'com.olafmertens.git-version' version '0.1.1'
 }
 ```
 

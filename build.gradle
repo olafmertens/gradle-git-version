@@ -8,13 +8,14 @@ gradlePlugin {
     plugins {
         gitVersion {
             id = 'com.olafmertens.git-version'
+            displayName = 'Git version plugin'
             description = 'Set project version based on git tag.'
             implementationClass = 'com.olafmertens.gradle.gitversion.GitVersionPlugin'
         }
     }
 }
 
-version = '0.1.0'
+version = '0.1.1'
 group = 'com.olafmertens.gradle'
 
 repositories {
