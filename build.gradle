@@ -1,0 +1,43 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '0.10.0'
+}
+
+gradlePlugin {
+    plugins {
+        gitVersion {
+            id = 'com.olafmertens.git-version'
+            description = 'Set project version based on git tag.'
+            implementationClass = 'com.olafmertens.gradle.gitversion.GitVersionPlugin'
+        }
+    }
+}
+
+version = '0.1.0'
+group = 'com.olafmertens.gradle'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+pluginBundle {
+    website = 'https://github.com/olafmertens/gradle-git-version'
+    vcsUrl = 'https://github.com/olafmertens/gradle-git-version'
+    tags = ['git', 'version']
+}
+
+wrapper {
+    gradleVersion = '4.10.2'
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
